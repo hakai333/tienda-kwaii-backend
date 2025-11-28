@@ -1,22 +1,13 @@
-package cl.MyMGroup.Tienda_Kwaii_backend.Tienda_Kwaii.entity;
+package cl.MyMGroup.Tienda_Kwaii_backend.Tienda_Kwaii.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.HashSet;
-import java.util.Set;
-
-@Entity
-@Table(name = "productos")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Producto {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class ProductoDto {
     private String nombre;
     private String descripcion;
     private Double precio;

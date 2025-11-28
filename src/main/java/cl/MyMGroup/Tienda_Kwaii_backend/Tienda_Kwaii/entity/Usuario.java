@@ -17,20 +17,20 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false)
     private String nombre;
-
-    @Column(nullable = false, unique = true)
+    private String apellido;
     private String email;
-
-    @Column(nullable = false)
     private String contrasena;
 
-    @ManyToOne
-    @JoinColumn(name = "rol_id", nullable = false)
+    @Enumerated(EnumType.STRING)
     private Rol rol;
 
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Pedido> pedidos = new HashSet<>();
+
+    public Usuario(String nombre, String apellido, String email, String contrasena) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.contrasena = contrasena;
+        this.rol = Rol.USUARIO;
+    }
 }

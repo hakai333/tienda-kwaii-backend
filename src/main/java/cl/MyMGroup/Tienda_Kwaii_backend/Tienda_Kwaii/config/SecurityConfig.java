@@ -30,9 +30,8 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
-
-
-    @Bean
+    /*
+    * @Bean
 
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
@@ -57,14 +56,17 @@ public class SecurityConfig {
         return http.build();
 
     }
+    * */
 
 
 
+
+    // ENCRIPTACION DE CONTRASENA
     @Bean
 
     public PasswordEncoder passwordEncoder() {
 
-        return new BCryptPasswordEncoder(); // Necesario para encriptar contraseñas
+        return new BCryptPasswordEncoder();
 
     }
 
