@@ -11,8 +11,7 @@ public interface ProductoRepository extends JpaRepository<Producto,Long> {
     List<Producto> findAllByActivoTrue();
 
     // Buscar Producto por su Categoria y si esta activo
-    List<Producto> findAllByCategoriaIdAndActivoTrue(Long categoriaId);
+    //List<Producto> findAllByCategoriaIdAndActivoTrue(Long categoriaId);
 
-    // Buscar Producto por su Tipo de Venta
-    List<Producto> findAllByTipoVentaAndActivoTrue(TipoVenta tipoVenta);
+
 }

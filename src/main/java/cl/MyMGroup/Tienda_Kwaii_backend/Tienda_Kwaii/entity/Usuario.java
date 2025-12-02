@@ -23,14 +23,6 @@ public class Usuario {
     private String contrasena;
 
     @Enumerated(EnumType.STRING)
-    private Rol rol;
-
-
-    public Usuario(String nombre, String apellido, String email, String contrasena) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.email = email;
-        this.contrasena = contrasena;
-        this.rol = Rol.USUARIO;
-    }
+    @Column(nullable = false)
+    private Rol rol = Rol.USUARIO;
 }
